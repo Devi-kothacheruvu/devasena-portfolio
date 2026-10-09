@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="hero container">
+  <div class="hero-copy">
+    <div class="eyebrow"><span class="status-dot"></span> COMPUTER SCIENCE · AI & ML</div>
+    <h1>Hi, I’m Devasena.<br><span class="gradient-text">I build useful things.</span></h1>
+    <p class="hero-lead">A Computer Science Engineering graduate specializing in AI & ML, currently working as a Backend Developer Intern at Smartkeen Tech and learning Workato automation alongside backend development.</p>
+    <div class="hero-actions">
+      <a class="button button-primary" href="#projects">Explore my projects <span>↘</span></a>
+      <a class="button button-secondary" href="{{ url_for('resume') }}">Download resume <span>↓</span></a>
+      <a class="button button-github" href="https://github.com/Devi-kothacheruvu" target="_blank" rel="noopener noreferrer">GitHub profile <span>↗</span></a>
+    </div>
+    <div class="hero-meta"><span><span class="meta-icon">⌘</span> Aspiring Backend Developer</span><span><span class="meta-icon">⌖</span> India</span></div>
+  </div>
+  <div class="hero-visual" aria-label="Profile photo and code illustration">
+    <div class="profile-photo-wrap">
+      <img class="profile-photo" src="{{ url_for('static', filename='files/devasena-profile.jpeg') }}" alt="Devasena's professional profile portrait">
+      <div class="photo-caption"><span class="photo-caption-dot"></span><span><strong>Devasena</strong><small>Backend Developer</small></span></div>
+    </div>
+    <div class="visual-orbit orbit-one"></div><div class="visual-orbit orbit-two"></div><div class="hero-glow"></div>
+    <div class="visual-card">
+      <div class="visual-card-top"><span class="mini-avatar">KD</span><span class="online-pill">● Always learning</span></div>
+      <div class="visual-code"><span class="code-muted">01</span> <span class="code-purple">developer</span> = {<br><span class="code-muted">02</span> &nbsp;skills: <span class="code-green">["Python", "SQL"]</span>,<br><span class="code-muted">03</span> &nbsp;focus: <span class="code-blue">"Backend"</span>,<br><span class="code-muted">04</span> &nbsp;mindset: <span class="code-green">"Keep learning"</span><br><span class="code-muted">05</span> }</div>
+      <div class="visual-card-bottom"><span>BUILD · LEARN · IMPROVE</span><span>✳</span></div>
+    </div>
+    <div class="floating-chip chip-top">✦ Python & Flask</div><div class="floating-chip chip-bottom">✳ APIs and databases</div>
+  </div>
+  <a class="scroll-cue" href="#about"><span></span> SCROLL TO EXPLORE</a>
+</section>
+
+<section class="section section-soft" id="about"><div class="container two-col">
+  <div><p class="section-kicker">01 / ABOUT ME</p><h2>Curious by nature.<br>Backend-focused.</h2></div>
+  <div class="section-copy"><p>I’m a Computer Science Engineering graduate specializing in Artificial Intelligence and Machine Learning. I have a foundation in Python, SQL, REST APIs, Flask, and Django, and I enjoy developing backend applications and learning how systems work behind the scenes.</p><p>Currently, I’m gaining practical exposure as a Backend Developer Intern at Smartkeen Tech while learning and working with Workato. I enjoy solving problems, building useful applications, and continuously improving my technical skills.</p><a class="text-link" href="https://www.linkedin.com/in/kothacheruvu-devasena-402ba5282" target="_blank" rel="noopener noreferrer">Connect on LinkedIn <span>↗</span></a></div>
+</div></section>
+
+<section class="section container" id="skills">
+  <div class="section-heading"><div><p class="section-kicker">02 / MY TOOLKIT</p><h2>Skills & technologies</h2></div><p class="heading-note">Technologies and concepts from my learning journey.</p></div>
+  <div class="skill-grid">
+    <article class="skill-card"><div class="skill-icon icon-lilac">⌘</div><h3>Programming</h3><p>Writing application logic and working with core programming concepts.</p><div class="tag-list"><span>Python</span><span>JavaScript</span><span>TypeScript</span><span>SQL</span></div></article>
+    <article class="skill-card"><div class="skill-icon icon-mint">◇</div><h3>Backend & APIs</h3><p>Building backend features and connecting applications through APIs.</p><div class="tag-list"><span>Flask</span><span>Django</span><span>Node.js</span><span>Express.js</span><span>REST API</span></div></article>
+    <article class="skill-card"><div class="skill-icon icon-peach">▦</div><h3>Frontend & databases</h3><p>Creating web interfaces and storing application data.</p><div class="tag-list"><span>HTML5</span><span>CSS3</span><span>React.js</span><span>MySQL</span><span>SQLite</span><span>PostgreSQL</span></div></article>
+  </div>
+  <div class="tool-strip"><span>ALSO FAMILIAR WITH</span><p>Bootstrap · Git · GitHub · VS Code · Postman · Firebase · Pandas · NumPy · Requests · OOP · DBMS · Data Structures</p></div>
+</section>
+
+<section class="section container" id="experience"><div class="section-heading"><div><p class="section-kicker">03 / EXPERIENCE</p><h2>What I’m learning and doing</h2></div><p class="heading-note">Growing through hands-on work and continuous learning.</p></div>
+  <div class="timeline">
+    <article class="timeline-item"><div class="timeline-dot"></div><div class="timeline-content"><div class="timeline-date">CURRENT INTERNSHIP</div><h3>Backend Developer Intern</h3><p><strong>Smartkeen Tech</strong></p><p>Gaining practical experience in backend development, strengthening programming fundamentals, and learning to build and support application features. Also learning and working with Workato for workflow automation.</p><div class="tag-list"><span>Backend Development</span><span>Workato</span><span>APIs</span></div></div></article>
+  </div>
+</section>
+
+<section class="section projects-section" id="projects"><div class="container">
+  <div class="section-heading"><div><p class="section-kicker">04 / PROJECTS</p><h2>Things I’ve worked on</h2></div><p class="heading-note">Practical projects that helped me apply my technical skills.</p></div>
+  <div class="project-grid project-grid-two">
+    <article class="project-card"><div class="project-art art-dashboard"><div class="mock-window"><div class="mock-dots">● ● ●</div><div class="mock-layout"><div class="mock-sidebar"></div><div class="mock-content"><div class="mock-line long"></div><div class="mock-stat-row"><span></span><span></span><span></span></div><div class="mock-chart"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div></div></div></div>
+      <div class="project-info"><div><p class="project-type">AI / DEEP LEARNING</p><h3>Facial Access for Banking Transactions</h3><p>Developed a facial recognition-based authentication system to support secure banking transactions.</p></div><span class="project-arrow">↗</span></div>
+      <ul class="project-points"><li>Implemented a CNN deep learning model to verify user identity.</li><li>Built the backend with Django and integrated the ML model.</li><li>Designed to help reduce unauthorized access.</li></ul>
+      <div class="tag-list"><span>Python</span><span>Django</span><span>CNN</span><span>Deep Learning</span></div>
+    </article>
+    <article class="project-card"><div class="project-art art-commerce"><div class="employee-symbol"><span>EMP</span><i>＋</i><i>✓</i><i>≡</i></div><div class="product-label">EMPLOYEE RECORDS</div></div>
+      <div class="project-info"><div><p class="project-type">JAVA · MINI PROJECT</p><h3>Employee Management System</h3><p>A CRUD-based application for organizing and managing employee information.</p></div><span class="project-arrow">↗</span></div>
+      <ul class="project-points"><li>Connected the application to MySQL using JDBC.</li><li>Implemented backend logic using Java Servlets.</li><li>Supported creating, reading, updating, and deleting employee records.</li></ul>
+      <div class="tag-list"><span>Java</span><span>JDBC</span><span>Servlets</span><span>MySQL</span></div>
+    </article>
+  </div>
+</div></section>
+
+<section class="section container" id="education"><div class="section-heading"><div><p class="section-kicker">05 / EDUCATION</p><h2>My academic journey</h2></div></div>
+  <div class="timeline">
+    <article class="timeline-item"><div class="timeline-dot"></div><div class="timeline-content"><div class="timeline-date">SEP 2021 — MAY 2025</div><h3>B.Tech — Computer Science Engineering (AI & ML)</h3><p>Sri Venkateswara College of Engineering and Technology</p><span class="score-pill">GPA · 8.58</span></div></article>
+    <article class="timeline-item"><div class="timeline-dot"></div><div class="timeline-content"><div class="timeline-date">JUN 2019 — MAY 2021</div><h3>Intermediate — MPC</h3><p>Sri Vivekananda Junior Kalasala</p><span class="score-pill">Score · 894</span></div></article>
+    <article class="timeline-item"><div class="timeline-dot"></div><div class="timeline-content"><div class="timeline-date">MAY 2019</div><h3>SSC</h3><p>Vaagdevi High School</p><span class="score-pill">GPA · 9.7</span></div></article>
+  </div>
+</section>
+
+<section class="section section-soft" id="certifications"><div class="container">
+  <div class="section-heading"><div><p class="section-kicker">06 / CERTIFICATIONS</p><h2>Learning, step by step</h2></div></div>
+  <div class="cert-grid"><article class="cert-card"><span class="cert-icon">✓</span><div><h3>Workato Foundations Level 1</h3><p>Workato Academy · Awarded July 24, 2026</p></div><span class="cert-arrow">✓</span></article><article class="cert-card"><span class="cert-icon">✓</span><div><h3>Workato Foundations Level 2</h3><p>Workato Academy · Awarded August 19, 2026</p></div><span class="cert-arrow">✓</span></article><article class="cert-card"><span class="cert-icon">⌘</span><div><h3>SQL Certificate</h3><p>EXCELR</p></div><span class="cert-arrow">↗</span></article><article class="cert-card"><span class="cert-icon">⌘</span><div><h3>Python Certificate</h3><p>EXCELR</p></div><span class="cert-arrow">↗</span></article></div>
+</div></section>
+
+<section class="contact-section container" id="contact"><div class="contact-panel"><div><p class="section-kicker">07 / LET’S CONNECT</p><h2>Ready to learn.<br><span>Ready to contribute.</span></h2><p>I’m interested in backend development opportunities and connecting with people who enjoy building useful technology.</p><div class="contact-details"><a href="mailto:devi786.k@gmail.com">devi786.k@gmail.com</a><span>·</span><span>+91 7075937462</span></div></div><div class="contact-actions"><a class="button button-light" href="https://github.com/Devi-kothacheruvu" target="_blank" rel="noopener noreferrer">Visit GitHub <span>↗</span></a><a class="contact-linkedin" href="https://www.linkedin.com/in/kothacheruvu-devasena-402ba5282" target="_blank" rel="noopener noreferrer">LinkedIn profile ↗</a></div><div class="contact-decoration">✳</div></div></section>
+{% endblock %}

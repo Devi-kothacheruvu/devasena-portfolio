@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Devasena — Computer Science graduate and aspiring backend developer.">
+  <title>{% block title %}Devasena | Backend Developer Portfolio{% endblock %}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <script defer src="{{ url_for('static', filename='js/main.js') }}"></script>
+</head>
+<body>
+<header class="site-header">
+  <nav class="nav container" aria-label="Main navigation">
+    <a class="brand" href="{{ url_for('home') }}"><span class="brand-mark">D</span> Devasena<span class="brand-dot">.</span></a>
+    <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+    <div class="nav-links">
+      <a href="{{ url_for('home') }}#about">About</a><a href="{{ url_for('home') }}#skills">Skills</a><a href="{{ url_for('home') }}#projects">Projects</a><a href="{{ url_for('home') }}#education">Education</a>
+      {% if session.get('user_id') %}
+        <a href="{{ url_for('dashboard') }}">Dashboard</a>
+        <form class="nav-logout" action="{{ url_for('logout') }}" method="post"><button class="nav-link-button" type="submit">Log out</button></form>
+      {% else %}
+        <a href="{{ url_for('login') }}">Log in</a><a class="nav-cta" href="{{ url_for('signup') }}">Create account <span>↗</span></a>
+      {% endif %}
+    </div>
+  </nav>
+</header>
+{% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}<div class="flash-wrap container" aria-live="polite">{% for category, message in messages %}<div class="flash flash-{{ category }}">{{ message }}<button class="flash-close" aria-label="Dismiss message">×</button></div>{% endfor %}</div>{% endif %}
+{% endwith %}
+<main>{% block content %}{% endblock %}</main>
+<footer class="site-footer"><div class="container footer-inner">
+  <a class="brand footer-brand" href="{{ url_for('home') }}"><span class="brand-mark">D</span> Devasena<span class="brand-dot">.</span></a>
+  <p>Backend development · Python · APIs · Databases</p>
+  <span>© <span id="year"></span> Devasena</span>
+</div></footer>
+</body>
+</html>

@@ -1,0 +1,10 @@
+DEPLOYING DEVASENA PORTFOLIO TO RENDER
+
+1. Create a GitHub repository and upload the contents of this folder (the app.py file should be at the repository root).
+2. In Render, choose New + > Web Service and connect the GitHub repository.
+3. Runtime: Python. Build command: pip install -r requirements.txt
+4. Start command: gunicorn app:app
+5. Add environment variable SECRET_KEY with a long random value, or use Render's generated value if deploying through render.yaml.
+6. Deploy and open the public onrender.com URL provided by Render.
+
+Note: SQLite data stored on the service's local filesystem may not persist across redeploys/restarts. The public portfolio pages can be hosted, but signup/login user records need a persistent database for production use.
